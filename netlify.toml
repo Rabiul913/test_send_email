@@ -1,9 +1,4 @@
 [build]
-  command = "CI='' npm run build"
-  publish = "/build"
+  command = "composer require phpmailer/phpmailer && npm install && npm run build"
+  publish = "public"
   base ="/"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
